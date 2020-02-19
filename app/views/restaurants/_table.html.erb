@@ -1,0 +1,25 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Category</th>
+      <th>Phone number</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @restaurant.each do |restaurant| %>
+      <tr>
+        <td><%= restaurant.name %></td>
+        <td><%= restaurant.address %></td>
+        <td><%= restaurant.category %></td>
+        <td><%= restaurant.phone_number %></td>
+       <!--  <td><= restaurant.review %></td> -->
+        <td><%= link_to 'Show', restaurant, class:"btn btn-warning" %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
